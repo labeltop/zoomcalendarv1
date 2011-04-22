@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'ZoomCalendarTests' target in the 'ZoomCalendarTests' project
+//
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+#endif

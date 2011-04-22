@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9F74B0CA1362230100A2DE47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0C91362230100A2DE47 /* UIKit.framework */; };
+		9F74B0CC1362230100A2DE47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0CB1362230100A2DE47 /* Foundation.framework */; };
+		9F74B0CE1362230100A2DE47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0CD1362230100A2DE47 /* CoreGraphics.framework */; };
+		9F74B0D41362230100A2DE47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F74B0D21362230100A2DE47 /* InfoPlist.strings */; };
+		9F74B0D71362230100A2DE47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74B0D61362230100A2DE47 /* main.m */; };
+		9F74B0DA1362230100A2DE47 /* ZoomCalendarAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74B0D91362230100A2DE47 /* ZoomCalendarAppDelegate.m */; };
+		9F74B0DD1362230100A2DE47 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74B0DB1362230100A2DE47 /* MainWindow.xib */; };
+		9F74B0E01362230100A2DE47 /* ZoomCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74B0DF1362230100A2DE47 /* ZoomCalendarViewController.m */; };
+		9F74B0E31362230100A2DE47 /* ZoomCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F74B0E11362230100A2DE47 /* ZoomCalendarViewController.xib */; };
+		9F74B0EA1362230100A2DE47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0C91362230100A2DE47 /* UIKit.framework */; };
+		9F74B0EB1362230100A2DE47 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0CB1362230100A2DE47 /* Foundation.framework */; };
+		9F74B0EC1362230100A2DE47 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0CD1362230100A2DE47 /* CoreGraphics.framework */; };
+		9F74B0F41362230100A2DE47 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9F74B0F21362230100A2DE47 /* InfoPlist.strings */; };
+		9F74B0F71362230100A2DE47 /* ZoomCalendarTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 9F74B0F61362230100A2DE47 /* ZoomCalendarTests.h */; };
+		9F74B0F91362230100A2DE47 /* ZoomCalendarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F74B0F81362230100A2DE47 /* ZoomCalendarTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9F74B0ED1362230100A2DE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9F74B0BC1362230100A2DE47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9F74B0C41362230100A2DE47;
+			remoteInfo = ZoomCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9F74B0C51362230100A2DE47 /* ZoomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F74B0C91362230100A2DE47 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9F74B0CB1362230100A2DE47 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9F74B0CD1362230100A2DE47 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9F74B0D11362230100A2DE47 /* ZoomCalendar-Info.plist */ = {isa = PBXFileReference; path = "ZoomCalendar-Info.plist"; sourceTree = "<group>"; };
+		9F74B0D31362230100A2DE47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F74B0D51362230100A2DE47 /* ZoomCalendar-Prefix.pch */ = {isa = PBXFileReference; path = "ZoomCalendar-Prefix.pch"; sourceTree = "<group>"; };
+		9F74B0D61362230100A2DE47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9F74B0D81362230100A2DE47 /* ZoomCalendarAppDelegate.h */ = {isa = PBXFileReference; path = ZoomCalendarAppDelegate.h; sourceTree = "<group>"; };
+		9F74B0D91362230100A2DE47 /* ZoomCalendarAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomCalendarAppDelegate.m; sourceTree = "<group>"; };
+		9F74B0DC1362230100A2DE47 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		9F74B0DE1362230100A2DE47 /* ZoomCalendarViewController.h */ = {isa = PBXFileReference; path = ZoomCalendarViewController.h; sourceTree = "<group>"; };
+		9F74B0DF1362230100A2DE47 /* ZoomCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomCalendarViewController.m; sourceTree = "<group>"; };
+		9F74B0E21362230100A2DE47 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ZoomCalendarViewController.xib; sourceTree = "<group>"; };
+		9F74B0E91362230100A2DE47 /* ZoomCalendarTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZoomCalendarTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F74B0F11362230100A2DE47 /* ZoomCalendarTests-Info.plist */ = {isa = PBXFileReference; path = "ZoomCalendarTests-Info.plist"; sourceTree = "<group>"; };
+		9F74B0F31362230100A2DE47 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9F74B0F51362230100A2DE47 /* ZoomCalendarTests-Prefix.pch */ = {isa = PBXFileReference; path = "ZoomCalendarTests-Prefix.pch"; sourceTree = "<group>"; };
+		9F74B0F61362230100A2DE47 /* ZoomCalendarTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoomCalendarTests.h; sourceTree = "<group>"; };
+		9F74B0F81362230100A2DE47 /* ZoomCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomCalendarTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9F74B0C21362230100A2DE47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F74B0CA1362230100A2DE47 /* UIKit.framework in Frameworks */,
+				9F74B0CC1362230100A2DE47 /* Foundation.framework in Frameworks */,
+				9F74B0CE1362230100A2DE47 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F74B0E51362230100A2DE47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F74B0EA1362230100A2DE47 /* UIKit.framework in Frameworks */,
+				9F74B0EB1362230100A2DE47 /* Foundation.framework in Frameworks */,
+				9F74B0EC1362230100A2DE47 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9F74B0BA1362230100A2DE47 = {
+			isa = PBXGroup;
+			children = (
+				9F74B0CF1362230100A2DE47 /* ZoomCalendar */,
+				9F74B0EF1362230100A2DE47 /* ZoomCalendarTests */,
+				9F74B0C81362230100A2DE47 /* Frameworks */,
+				9F74B0C61362230100A2DE47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9F74B0C61362230100A2DE47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9F74B0C51362230100A2DE47 /* ZoomCalendar.app */,
+				9F74B0E91362230100A2DE47 /* ZoomCalendarTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F74B0C81362230100A2DE47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F74B0C91362230100A2DE47 /* UIKit.framework */,
+				9F74B0CB1362230100A2DE47 /* Foundation.framework */,
+				9F74B0CD1362230100A2DE47 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F74B0CF1362230100A2DE47 /* ZoomCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				9F74B0D81362230100A2DE47 /* ZoomCalendarAppDelegate.h */,
+				9F74B0D91362230100A2DE47 /* ZoomCalendarAppDelegate.m */,
+				9F74B0DB1362230100A2DE47 /* MainWindow.xib */,
+				9F74B0DE1362230100A2DE47 /* ZoomCalendarViewController.h */,
+				9F74B0DF1362230100A2DE47 /* ZoomCalendarViewController.m */,
+				9F74B0E11362230100A2DE47 /* ZoomCalendarViewController.xib */,
+				9F74B0D01362230100A2DE47 /* Supporting Files */,
+			);
+			path = ZoomCalendar;
+			sourceTree = "<group>";
+		};
+		9F74B0D01362230100A2DE47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F74B0D11362230100A2DE47 /* ZoomCalendar-Info.plist */,
+				9F74B0D21362230100A2DE47 /* InfoPlist.strings */,
+				9F74B0D51362230100A2DE47 /* ZoomCalendar-Prefix.pch */,
+				9F74B0D61362230100A2DE47 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F74B0EF1362230100A2DE47 /* ZoomCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				9F74B0F61362230100A2DE47 /* ZoomCalendarTests.h */,
+				9F74B0F81362230100A2DE47 /* ZoomCalendarTests.m */,
+				9F74B0F01362230100A2DE47 /* Supporting Files */,
+			);
+			path = ZoomCalendarTests;
+			sourceTree = "<group>";
+		};
+		9F74B0F01362230100A2DE47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F74B0F11362230100A2DE47 /* ZoomCalendarTests-Info.plist */,
+				9F74B0F21362230100A2DE47 /* InfoPlist.strings */,
+				9F74B0F51362230100A2DE47 /* ZoomCalendarTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9F74B0C41362230100A2DE47 /* ZoomCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F74B0FC1362230100A2DE47 /* Build configuration list for PBXNativeTarget "ZoomCalendar" */;
+			buildPhases = (
+				9F74B0C11362230100A2DE47 /* Sources */,
+				9F74B0C21362230100A2DE47 /* Frameworks */,
+				9F74B0C31362230100A2DE47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZoomCalendar;
+			productName = ZoomCalendar;
+			productReference = 9F74B0C51362230100A2DE47 /* ZoomCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9F74B0E81362230100A2DE47 /* ZoomCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9F74B0FF1362230100A2DE47 /* Build configuration list for PBXNativeTarget "ZoomCalendarTests" */;
+			buildPhases = (
+				9F74B0E41362230100A2DE47 /* Sources */,
+				9F74B0E51362230100A2DE47 /* Frameworks */,
+				9F74B0E61362230100A2DE47 /* Resources */,
+				9F74B0E71362230100A2DE47 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9F74B0EE1362230100A2DE47 /* PBXTargetDependency */,
+			);
+			name = ZoomCalendarTests;
+			productName = ZoomCalendarTests;
+			productReference = 9F74B0E91362230100A2DE47 /* ZoomCalendarTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9F74B0BC1362230100A2DE47 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 9F74B0BF1362230100A2DE47 /* Build configuration list for PBXProject "ZoomCalendar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9F74B0BA1362230100A2DE47;
+			productRefGroup = 9F74B0C61362230100A2DE47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9F74B0C41362230100A2DE47 /* ZoomCalendar */,
+				9F74B0E81362230100A2DE47 /* ZoomCalendarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9F74B0C31362230100A2DE47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F74B0D41362230100A2DE47 /* InfoPlist.strings in Resources */,
+				9F74B0DD1362230100A2DE47 /* MainWindow.xib in Resources */,
+				9F74B0E31362230100A2DE47 /* ZoomCalendarViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F74B0E61362230100A2DE47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F74B0F41362230100A2DE47 /* InfoPlist.strings in Resources */,
+				9F74B0F71362230100A2DE47 /* ZoomCalendarTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F74B0E71362230100A2DE47 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9F74B0C11362230100A2DE47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F74B0D71362230100A2DE47 /* main.m in Sources */,
+				9F74B0DA1362230100A2DE47 /* ZoomCalendarAppDelegate.m in Sources */,
+				9F74B0E01362230100A2DE47 /* ZoomCalendarViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F74B0E41362230100A2DE47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F74B0F91362230100A2DE47 /* ZoomCalendarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9F74B0EE1362230100A2DE47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9F74B0C41362230100A2DE47 /* ZoomCalendar */;
+			targetProxy = 9F74B0ED1362230100A2DE47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9F74B0D21362230100A2DE47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F74B0D31362230100A2DE47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9F74B0DB1362230100A2DE47 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F74B0DC1362230100A2DE47 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		9F74B0E11362230100A2DE47 /* ZoomCalendarViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F74B0E21362230100A2DE47 /* en */,
+			);
+			name = ZoomCalendarViewController.xib;
+			sourceTree = "<group>";
+		};
+		9F74B0F21362230100A2DE47 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9F74B0F31362230100A2DE47 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9F74B0FA1362230100A2DE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		9F74B0FB1362230100A2DE47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+		9F74B0FD1362230100A2DE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZoomCalendar/ZoomCalendar-Prefix.pch";
+				INFOPLIST_FILE = "ZoomCalendar/ZoomCalendar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9F74B0FE1362230100A2DE47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZoomCalendar/ZoomCalendar-Prefix.pch";
+				INFOPLIST_FILE = "ZoomCalendar/ZoomCalendar-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9F74B1001362230100A2DE47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZoomCalendar.app/ZoomCalendar";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZoomCalendarTests/ZoomCalendarTests-Prefix.pch";
+				INFOPLIST_FILE = "ZoomCalendarTests/ZoomCalendarTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9F74B1011362230100A2DE47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ZoomCalendar.app/ZoomCalendar";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZoomCalendarTests/ZoomCalendarTests-Prefix.pch";
+				INFOPLIST_FILE = "ZoomCalendarTests/ZoomCalendarTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9F74B0BF1362230100A2DE47 /* Build configuration list for PBXProject "ZoomCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F74B0FA1362230100A2DE47 /* Debug */,
+				9F74B0FB1362230100A2DE47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9F74B0FC1362230100A2DE47 /* Build configuration list for PBXNativeTarget "ZoomCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F74B0FD1362230100A2DE47 /* Debug */,
+				9F74B0FE1362230100A2DE47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9F74B0FF1362230100A2DE47 /* Build configuration list for PBXNativeTarget "ZoomCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F74B1001362230100A2DE47 /* Debug */,
+				9F74B1011362230100A2DE47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9F74B0BC1362230100A2DE47 /* Project object */;
+}
