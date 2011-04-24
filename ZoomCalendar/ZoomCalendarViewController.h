@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CalendarScroll.h"
 
 @interface ZoomCalendarViewController : UIViewController {
+    CalendarScroll* scrollView;
     
+    IBOutlet UIButton* buttonToday;
 }
+
+-(IBAction)buttonToday_click;
 
 @end
