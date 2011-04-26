@@ -41,6 +41,8 @@
     [[self view] bringSubviewToFront:buttonBack];
     [[self view] bringSubviewToFront:buttonToday];
     [[self view] bringSubviewToFront:buttonSettings];
+    
+    [[self view] setBackgroundColor:[ViewConstants COLOR_BACKGROUND]];
 }    
 
 - (void)viewDidUnload

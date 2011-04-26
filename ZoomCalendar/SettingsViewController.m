@@ -56,7 +56,7 @@
 }
 
 - (IBAction)done:(id)sender {
-    
+    [self.delegate settingsViewControllerDidFinish:self]; 
 }
 
 @end
