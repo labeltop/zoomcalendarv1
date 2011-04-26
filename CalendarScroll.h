@@ -7,16 +7,24 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YearView.h"
+#import <QuartzCore/CoreAnimation.h>
+#import "MonthView.h"
+#import "Month.h"
 
 @interface CalendarScroll : UIScrollView <UIScrollViewDelegate> {
-    //state of current zoom
-    float currentZoom;
-    
-    //content
-    YearView* content;
+    MonthView* content;
+    Month* visibleMonth;
 }
 
+@property (nonatomic, assign) Month* visibleMonth;
+
+/*
 -(void) scrollToDate:(NSDate*)d;
+ */
+-(void) scrollToMonth:(Month*)m;
+
+-(Month*) currentMonth;
+-(Month*) nextMonth;
+-(Month*) prevMonth;
 
 @end

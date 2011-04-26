@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "DateUtils.h"
 #import "ViewConstants.h"
 
@@ -14,17 +15,21 @@
     int dayOfMonth;
     int month;
     int year;
+    BOOL hasDate;
 }
 
+@property (nonatomic, assign) BOOL hasDate;
 @property (nonatomic, assign) int dayOfMonth;
 @property (nonatomic, assign) int month;
 @property (nonatomic, assign) int year;
 
--(id) initWithDate:(int)d inMonth:(int)m inYear:(int)yr  atX:(int)x atY:(int)y;
--(id) initWithLabel:(NSString*)str atX:(int)x atY:(int)y;
+-(id) initAtX:(int)x atY:(int)y;
 
--(void) create:(NSString*)str;
-- (void)handleDoubleTap:(UITapGestureRecognizer *)sender;
-- (void)handleSingleTap:(UITapGestureRecognizer *)sender;
+-(void) setDate:(int)d inMonth:(int)m inYear:(int)y;
+-(void) setWeekLabel:(NSString*)str;
+-(void) clear;
+
+-(void)handleDoubleTap:(UITapGestureRecognizer *)sender;
+-(void)handleSingleTap:(UITapGestureRecognizer *)sender;
 
 @end

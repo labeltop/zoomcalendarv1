@@ -16,12 +16,17 @@
     //get a specific date
     int month;
     int year;
+    
+    //ui
+    UILabel* labelTitle;
+    NSMutableArray* arrayDayViews;
         
 }
 
 @property (nonatomic, assign) int month;
 @property (nonatomic, assign) int year;
 
--(id) initWithMonth:(int)month AndYear:(int)year atX:(int)x atY:(int)y;
+-(id) initAtX:(int)x atY:(int)y;
+-(void) setMonth:(int)m inYear:(int)y;
 
 @end

@@ -24,14 +24,15 @@
     if (self) {
         // Initialization code
         [self setYear:yr];
+        [self setBackgroundColor:[UIColor clearColor]];
         
         //put title
         UILabel* labelTitle = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, [ViewConstants YEAR_VIEW_WIDTH], [ViewConstants DAY_VIEW_HEIGHT])];
         [labelTitle setText:[NSString stringWithFormat:@"%d", [self year]]];
         [labelTitle setTextAlignment:UITextAlignmentCenter];
-        [labelTitle setBackgroundColor:[UIColor redColor]];
-        [labelTitle setTextColor:[UIColor whiteColor]];
-        [labelTitle setFont:[UIFont systemFontOfSize:24]];
+        [labelTitle setBackgroundColor:[UIColor clearColor]];
+        [labelTitle setTextColor:[UIColor blackColor]];
+        [labelTitle setFont:[UIFont systemFontOfSize:150]];
         [self addSubview:labelTitle];
         
         //get number of days in this month
@@ -71,9 +72,11 @@
             
             //create  view for this day and add it
             NSLog(@"YearView: month: %d (%d,%d)", i, x, y);
+            /*
             MonthView* v = [[MonthView alloc] initWithMonth:i AndYear:[self year] atX:x atY:y];
             //add it
-            [self addSubview:v];            
+            [self addSubview:v];
+             */
         }
     }
     return self;    
@@ -99,8 +102,8 @@
                                 NSLog(@"YearView: getDateLocation: pointDay: (%f, %f)", pointDay.x, pointDay.y);
                                 
                                 //return pointDay;
-                                //return CGPointMake(pointMonth.x + pointDay.x, pointMonth.y + pointMonth.y);
-                                return CGPointMake(400, 0);
+                                return CGPointMake(pointMonth.x + pointDay.x, pointMonth.y + pointMonth.y);
+                                //return CGPointMake(400, 0);
                             }
                         }
                     }
@@ -113,16 +116,12 @@
     return CGPointMake(0, 0);
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
++ (Class)layerClass
 {
-    // Drawing code
+	return [CATiledLayer class];
 }
-*/
-
-- (void)dealloc
+ 
+- (void) dealloc
 {
     [super dealloc];
 }

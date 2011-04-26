@@ -12,20 +12,20 @@
 @implementation ViewConstants
 
 + (int) DAY_VIEW_WIDTH {
-    return 50;
+    return 300;
 }
 
 + (int) DAY_VIEW_HEIGHT {
-    return 50;
+    return 300;
 }
 
 + (int) MONTH_VIEW_WIDTH {
-    return 350;
+    return 2100;
 }
 
 //title + weekday header + 6 weeks
 + (int) MONTH_VIEW_HEIGHT {
-    return 400;
+    return 2400;
 }
 
 + (int) MONTH_SPACING {
@@ -33,12 +33,12 @@
 }
 
 + (int) YEAR_VIEW_WIDTH {
-    return 1460;
+    return 8460;
 }
 
 //number of months in a column + paddings + year title
 + (int) YEAR_VIEW_HEIGHT {
-    return 1160;
+    return 7560;
 }
 
 @end

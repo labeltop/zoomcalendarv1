@@ -13,8 +13,9 @@
 @synthesize dayOfMonth;
 @synthesize month;
 @synthesize year;
+@synthesize hasDate;
 
--(id) initWithDate:(int)d inMonth:(int)m inYear:(int)yr atX:(int)x atY:(int)y{
+-(id) initAtX:(int)x atY:(int)y{
     //create frame for it
     CGRect frame = CGRectMake (x,//x
                                y,//y
@@ -24,25 +25,19 @@
     
     self = [super initWithFrame:frame];
     if (self) {
-        [self setDayOfMonth:d];
-        [self setMonth:m];
-        [self setYear:yr];
-        [self create:[NSString stringWithFormat:@"%d", [self dayOfMonth]]];
-    }
-    return self;    
-}
-
--(id) initWithLabel:(NSString*)str atX:(int)x atY:(int)y {
-    //create frame for it
-    CGRect frame = CGRectMake (x,//x
-                               y,//y
-                               [ViewConstants DAY_VIEW_WIDTH],//w
-                               [ViewConstants DAY_VIEW_HEIGHT]//h
-                               );
-    
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self create:str];
+        
+        UITapGestureRecognizer *doubleTap = 
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];	
+        [doubleTap setNumberOfTapsRequired:2];
+        [self addGestureRecognizer:doubleTap];
+        [doubleTap release];
+        
+        UITapGestureRecognizer *singleTap = 
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];	
+        [singleTap setNumberOfTapsRequired:1]; // Unnecessary since it's the default
+        [singleTap requireGestureRecognizerToFail:doubleTap];
+        [self addGestureRecognizer:singleTap];
+        [singleTap release];
     }
     return self;    
 }
@@ -52,31 +47,59 @@
     [super dealloc];
 }
 
--(void) create:(NSString*)str {
-    CGRect frame = CGRectMake (0, 0, [ViewConstants DAY_VIEW_WIDTH],
-                        [ViewConstants DAY_VIEW_HEIGHT]);
+-(void) setDate:(int)d inMonth:(int)m inYear:(int)y {
+    [self setHasDate:YES];
+    [self setDayOfMonth:d];
+    [self setMonth:m];
+    [self setYear:y];
     
-    //create label for it
-    UILabel* labelDay = [[UILabel alloc] initWithFrame:frame];
-    [labelDay setText:str];
-    [labelDay setTextAlignment:UITextAlignmentCenter];
-    [labelDay setBackgroundColor:[UIColor clearColor]];
-    [labelDay setTextColor:[UIColor whiteColor]];
+    CGRect frame = CGRectMake (0, 0, [ViewConstants DAY_VIEW_WIDTH], 50);
+    
+    UILabel* labelDay;
+    labelDay = [[UILabel alloc] initWithFrame:frame];
+    [labelDay setFont:[UIFont systemFontOfSize:24]];
+    [labelDay setText:[NSString stringWithFormat:@"%d", [self dayOfMonth]]];
     [self addSubview:labelDay];
     
-	
-	UITapGestureRecognizer *doubleTap = 
-	[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];	
-	[doubleTap setNumberOfTapsRequired:2];
-	[self addGestureRecognizer:doubleTap];
-	[doubleTap release];
-	
-	UITapGestureRecognizer *singleTap = 
-	[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];	
-	[singleTap setNumberOfTapsRequired:1]; // Unnecessary since it's the default
-	[singleTap requireGestureRecognizerToFail:doubleTap];
-	[self addGestureRecognizer:singleTap];
-	[singleTap release];
+    //set a border
+    self.layer.borderWidth = 3.0f;
+    self.layer.cornerRadius = 24;  
+    
+    //check if this date view is showing todays date
+    if ([DateUtils isToday:[self dayOfMonth] inMonth:[self month] inYear:[self year]]) {
+        [labelDay setTextColor:[UIColor blackColor]];
+        [labelDay setBackgroundColor:[UIColor yellowColor]]; 
+        self.layer.borderColor = [UIColor yellowColor].CGColor;        
+    }
+    else {
+        [labelDay setTextColor:[UIColor whiteColor]];
+        [labelDay setBackgroundColor:[UIColor blueColor]]; 
+        self.layer.borderColor = [UIColor blueColor].CGColor;        
+    }
+}
+
+-(void) setWeekLabel:(NSString*)str {
+    [self setHasDate:NO];
+    
+    CGRect frame = CGRectMake (0, 0, [ViewConstants DAY_VIEW_WIDTH],
+                               [ViewConstants DAY_VIEW_HEIGHT]);
+    
+    //create label for it
+    UILabel* labelDay;
+    labelDay = [[UILabel alloc] initWithFrame:frame];
+    [labelDay setTextAlignment:UITextAlignmentCenter];
+    [labelDay setTextColor:[UIColor blackColor]];
+    [labelDay setBackgroundColor:[UIColor clearColor]];
+    [labelDay setFont:[UIFont systemFontOfSize:80]];
+    [labelDay setText:str];
+    [self addSubview:labelDay];
+}
+
+-(void) clear {
+    self.layer.borderColor = [UIColor clearColor].CGColor;
+    for(UIView *subview in [self subviews]) {
+        [subview removeFromSuperview];
+    }
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
