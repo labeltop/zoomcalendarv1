@@ -29,7 +29,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self view] setBackgroundColor:[UIColor blackColor]];
         
     CGFloat scrollWidth = [UIScreen mainScreen].bounds.size.width;
     CGFloat scrollHeight = [UIScreen mainScreen].bounds.size.height;
@@ -38,15 +37,19 @@
     [[self view] addSubview:scrollView];
     [scrollView release];
     
+    [[self view] bringSubviewToFront:buttonForward];
+    [[self view] bringSubviewToFront:buttonBack];
     [[self view] bringSubviewToFront:buttonToday];
+    [[self view] bringSubviewToFront:buttonSettings];
 }    
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
     scrollView = nil;
+    buttonBack = nil;
+    buttonForward = nil;
+    buttonToday = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -55,9 +58,30 @@
 }
 
 - (IBAction) buttonToday_click {
-    NSLog(@"ZoomCalendarViewController: buttonToday_click: start");
-    [scrollView scrollToDate:[NSDate date]];
-    NSLog(@"ZoomCalendarViewController: buttonToday_click: end");
+    [scrollView scrollToMonth:[scrollView currentMonth]];
+}
+
+- (IBAction) buttonForward_click {
+    [scrollView scrollToMonth:[scrollView nextMonth]];
+}
+
+- (IBAction) buttonBack_click {
+    [scrollView scrollToMonth:[scrollView prevMonth]];
+}
+
+- (IBAction) buttonSettings_click {    
+    SettingsViewController*  controller = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
+    controller.delegate = self;
+    
+    controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:controller animated:YES];
+    
+    [controller release];
+}
+
+- (void)settingsViewControllerDidFinish:(SettingsViewController*)controller
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

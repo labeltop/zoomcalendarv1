@@ -7,14 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SettingsViewController.h"
 #import "CalendarScroll.h"
 
-@interface ZoomCalendarViewController : UIViewController {
+@interface ZoomCalendarViewController : UIViewController <SettingsViewDelegate> {
     CalendarScroll* scrollView;
     
+    IBOutlet UIButton* buttonForward;
+    IBOutlet UIButton* buttonBack;
     IBOutlet UIButton* buttonToday;
+    IBOutlet UIButton* buttonSettings;
 }
 
--(IBAction)buttonToday_click;
+-(IBAction) buttonSettings_click; 
+-(IBAction) buttonToday_click;
+-(IBAction) buttonForward_click;
+-(IBAction) buttonBack_click;
 
 @end
