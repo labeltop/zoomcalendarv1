@@ -41,4 +41,13 @@
     return 7560;
 }
 
++(UIColor*) COLOR_HEADING {
+    //return [UIColor colorWithRed:188.0/255 green:108.0/255 blue:49.0/255 alpha:1.0];
+    return [UIColor colorWithRed:255.0/255 green:153.0/255 blue:0.0/255 alpha:1.0];
+}
+
++(UIColor*) COLOR_BACKGROUND {
+    return [UIColor colorWithRed:66.0/255 green:66.0/255 blue:66.0/255 alpha:1.0];    
+}
+
 @end

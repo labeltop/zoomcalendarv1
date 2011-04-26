@@ -34,7 +34,7 @@
         labelTitle = [[UILabel alloc] initWithFrame:labelTitleFrame];
         [labelTitle setTextAlignment:UITextAlignmentCenter];
         [labelTitle setFont:[UIFont systemFontOfSize:80]];
-        [labelTitle setTextColor:[UIColor blackColor]];
+        [labelTitle setTextColor:[ViewConstants COLOR_HEADING]];
         [labelTitle setBackgroundColor:[UIColor clearColor]];
         [self addSubview:labelTitle];
         

@@ -23,4 +23,7 @@
 + (int) YEAR_VIEW_WIDTH;
 + (int) YEAR_VIEW_HEIGHT;
 
++(UIColor*) COLOR_HEADING;
++(UIColor*) COLOR_BACKGROUND;
+
 @end

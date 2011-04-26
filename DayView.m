@@ -53,29 +53,30 @@
     [self setMonth:m];
     [self setYear:y];
     
-    CGRect frame = CGRectMake (0, 0, [ViewConstants DAY_VIEW_WIDTH], 50);
+    CGRect labelDayOfMonthFrame = CGRectMake (5, 5, 100, 60);
     
-    UILabel* labelDay;
-    labelDay = [[UILabel alloc] initWithFrame:frame];
-    [labelDay setFont:[UIFont systemFontOfSize:24]];
-    [labelDay setText:[NSString stringWithFormat:@"%d", [self dayOfMonth]]];
-    [self addSubview:labelDay];
+    UILabel* labelDayOfMonth;
+    labelDayOfMonth = [[UILabel alloc] initWithFrame:labelDayOfMonthFrame];
+    [labelDayOfMonth setFont:[UIFont boldSystemFontOfSize:54]];
+    [labelDayOfMonth setText:[NSString stringWithFormat:@"%d", [self dayOfMonth]]];
+    [labelDayOfMonth setTextColor:[ViewConstants COLOR_HEADING]];
+    [labelDayOfMonth setBackgroundColor:[UIColor clearColor]]; 
+    [self addSubview:labelDayOfMonth];
     
     //set a border
-    self.layer.borderWidth = 3.0f;
-    self.layer.cornerRadius = 24;  
+    self.layer.borderWidth = 2.0f;
+    /*
+    self.layer.cornerRadius = 24;
+     */
     
     //check if this date view is showing todays date
     if ([DateUtils isToday:[self dayOfMonth] inMonth:[self month] inYear:[self year]]) {
-        [labelDay setTextColor:[UIColor blackColor]];
-        [labelDay setBackgroundColor:[UIColor yellowColor]]; 
         self.layer.borderColor = [UIColor yellowColor].CGColor;        
     }
     else {
-        [labelDay setTextColor:[UIColor whiteColor]];
-        [labelDay setBackgroundColor:[UIColor blueColor]]; 
-        self.layer.borderColor = [UIColor blueColor].CGColor;        
+        self.layer.borderColor = [UIColor colorWithRed:149.0/255 green:114.0/255 blue:88.0/255 alpha:1.0].CGColor;        
     }
+    
 }
 
 -(void) setWeekLabel:(NSString*)str {
@@ -88,7 +89,7 @@
     UILabel* labelDay;
     labelDay = [[UILabel alloc] initWithFrame:frame];
     [labelDay setTextAlignment:UITextAlignmentCenter];
-    [labelDay setTextColor:[UIColor blackColor]];
+    [labelDay setTextColor:[ViewConstants COLOR_HEADING]];
     [labelDay setBackgroundColor:[UIColor clearColor]];
     [labelDay setFont:[UIFont systemFontOfSize:80]];
     [labelDay setText:str];
