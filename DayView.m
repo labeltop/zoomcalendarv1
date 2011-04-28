@@ -74,9 +74,8 @@
         self.layer.borderColor = [UIColor yellowColor].CGColor;        
     }
     else {
-        self.layer.borderColor = [UIColor colorWithRed:149.0/255 green:114.0/255 blue:88.0/255 alpha:1.0].CGColor;        
-    }
-    
+        self.layer.borderColor = [ViewConstants COLOR_BORDER_DAY].CGColor;        
+    }    
 }
 
 -(void) setWeekLabel:(NSString*)str {

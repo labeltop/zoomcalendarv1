@@ -25,5 +25,6 @@
 
 +(UIColor*) COLOR_HEADING;
 +(UIColor*) COLOR_BACKGROUND;
++(UIColor*) COLOR_BORDER_DAY;
 
 @end

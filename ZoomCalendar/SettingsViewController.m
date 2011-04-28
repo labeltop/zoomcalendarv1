@@ -17,6 +17,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        [[self view] setBackgroundColor:[ViewConstants COLOR_BACKGROUND]];
     }
     return self;
 }
@@ -57,6 +58,37 @@
 
 - (IBAction)done:(id)sender {
     [self.delegate settingsViewControllerDidFinish:self]; 
+}
+
+-(IBAction) createAccount:(id)sender {
+    AccountEditViewController* v = [[AccountEditViewController alloc] initWithNibName:@"AccountEditViewController" bundle:nil];
+    [self.view addSubview:[v view]];
+	
+	// Show the message for x seconds
+	[v show];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 10;
+}
+
+//RootViewController.m
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:CellIdentifier] autorelease];
+    }
+    
+    [cell setBackgroundColor:[UIColor clearColor]];
+        
+    return cell;
 }
 
 @end

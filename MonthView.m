@@ -134,54 +134,6 @@
         //go to next cell
         indexDayView++;
     }
-    
-    /*
-    //update offset
-    int yOffset = [ViewConstants DAY_VIEW_HEIGHT];
-    yOffset = yOffset + [ViewConstants DAY_VIEW_HEIGHT];
-    
-    //get number of days in this month
-    int daysInMonth = [DateUtils GetNumberOfDaysInMonth:[self month] inYear:[self year]];
-    NSLog(@"MonthView: daysInMonth: %d", daysInMonth);
-    
-    //figure out whats day of week for 1st of month
-    int numberOfDaysInWeek = [DateUtils GetNumberOfdaysInWeek];
-    int dayOfWeek = [DateUtils GetDayfWeek:1 inMonth:[self month] inYear:[self year]];
-    NSLog(@"MonthView: startDayOfWeek: %d", dayOfWeek);
-    
-    int weekOfMonth = 0;
-    int day = 1;
-    int x = -1;
-    int y = -1;
-    do {
-        
-        //get x, offset by -1 so its flush on left side
-        x = [ViewConstants DAY_VIEW_WIDTH] * (dayOfWeek - 1);
-        
-        //
-        y = ([ViewConstants DAY_VIEW_HEIGHT] * weekOfMonth) + yOffset;
-        NSLog(@"      MonthView: day %d (%d): %d,%d", day,dayOfWeek,x,y);
-        
-        
-        //create  view for this day and add it
-        DayView* dv = [[DayView alloc] initWithDate:day inMonth:month inYear:year atX:x atY:y];
-        //add it
-        [self addSubview:dv];
-        
-        //go to next day
-        day++;
-        
-        //go to next day of week, we use this for x offset
-        if (dayOfWeek == numberOfDaysInWeek) {
-            dayOfWeek = 1;
-            weekOfMonth++;
-        }
-        else
-            dayOfWeek++;
-        
-        
-    } while (day <= daysInMonth);  
-     */
 }
 
 - (void)dealloc

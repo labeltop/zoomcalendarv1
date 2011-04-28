@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewConstants.h"
+#import "AccountEditViewController.h"
 
 @protocol SettingsViewDelegate;
 
-@interface SettingsViewController : UIViewController {
+@interface SettingsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     
 }
 @property (nonatomic, assign) id<SettingsViewDelegate> delegate;
 
-- (IBAction)done:(id)sender;
+-(IBAction) done:(id)sender;
+-(IBAction) createAccount:(id)sender;
 
 @end
 
