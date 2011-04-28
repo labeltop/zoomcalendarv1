@@ -202,6 +202,13 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		9F42CA701369ED2300FF2FE9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
 		9F49FCD61367AB9C00AC274E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +263,7 @@
 		9F74B0BA1362230100A2DE47 = {
 			isa = PBXGroup;
 			children = (
+				9F42CA701369ED2300FF2FE9 /* Storage */,
 				9F1CFA5F1367655100337D1F /* Images */,
 				9FA7A6711366A1BF000815CB /* Model */,
 				9F5AF7FB13623AE40081EEAF /* Views */,
