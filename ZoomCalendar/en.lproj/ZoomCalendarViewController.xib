@@ -112,7 +112,7 @@
 					<object class="IBUIButton" id="633176560">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{737, 971}, {18, 19}}</string>
+						<string key="NSFrame">{{730, 965}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView"/>
@@ -239,6 +239,14 @@
 					</object>
 					<int key="connectionID">21</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">imageTrash</string>
+						<reference key="source" ref="841351856"/>
+						<reference key="destination" ref="569175211"/>
+					</object>
+					<int key="connectionID">23</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -265,11 +273,11 @@
 						<reference key="object" ref="766721923"/>
 						<object class="NSMutableArray" key="children">
 							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="633176560"/>
 							<reference ref="280259384"/>
 							<reference ref="187102704"/>
 							<reference ref="1019555968"/>
 							<reference ref="569175211"/>
+							<reference ref="633176560"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -345,7 +353,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">22</int>
+			<int key="maxID">23</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -407,6 +415,7 @@
 							<string>buttonForward</string>
 							<string>buttonSettings</string>
 							<string>buttonToday</string>
+							<string>imageTrash</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -414,6 +423,7 @@
 							<string>UIButton</string>
 							<string>UIButton</string>
 							<string>UIButton</string>
+							<string>UIImageView</string>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
@@ -424,6 +434,7 @@
 							<string>buttonForward</string>
 							<string>buttonSettings</string>
 							<string>buttonToday</string>
+							<string>imageTrash</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -442,6 +453,10 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">buttonToday</string>
 								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">imageTrash</string>
+								<string key="candidateClassName">UIImageView</string>
 							</object>
 						</object>
 					</object>
