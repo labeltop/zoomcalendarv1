@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-
-@interface CalendarAccount : NSObject {
+@interface CalendarAccount : NSManagedObject {
     //credentials
 	NSString* user;
 	NSString* pass;

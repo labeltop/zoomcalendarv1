@@ -19,6 +19,7 @@
 		9F1CFA6F13676CD300337D1F /* buttonToday.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1CFA6E13676CD300337D1F /* buttonToday.png */; };
 		9F2A88C713627A4D009815DB /* ViewConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F2A88C613627A4D009815DB /* ViewConstants.m */; };
 		9F33263D1363D71E00DF2213 /* CalendarScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F33263C1363D71E00DF2213 /* CalendarScroll.m */; };
+		9F35B206136A85F6002CD4AA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F35B205136A85F6002CD4AA /* CoreData.framework */; };
 		9F49FCDA1367ABCA00AC274E /* AccountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F49FCD81367ABCA00AC274E /* AccountEditViewController.m */; };
 		9F49FCDB1367ABCA00AC274E /* AccountEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F49FCD91367ABCA00AC274E /* AccountEditViewController.xib */; };
 		9F57DD5B1364DE6C00028317 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F57DD5A1364DE6C00028317 /* QuartzCore.framework */; };
@@ -121,6 +122,7 @@
 		9F2A88C613627A4D009815DB /* ViewConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewConstants.m; sourceTree = "<group>"; };
 		9F33263B1363D71E00DF2213 /* CalendarScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarScroll.h; sourceTree = "<group>"; };
 		9F33263C1363D71E00DF2213 /* CalendarScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarScroll.m; sourceTree = "<group>"; };
+		9F35B205136A85F6002CD4AA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9F49FCD71367ABCA00AC274E /* AccountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountEditViewController.h; sourceTree = "<group>"; };
 		9F49FCD81367ABCA00AC274E /* AccountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountEditViewController.m; sourceTree = "<group>"; };
 		9F49FCD91367ABCA00AC274E /* AccountEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountEditViewController.xib; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F35B206136A85F6002CD4AA /* CoreData.framework in Frameworks */,
 				9F0332DA136A72EA0094D9BF /* libLabelTop_ios.a in Frameworks */,
 				9F57DD5B1364DE6C00028317 /* QuartzCore.framework in Frameworks */,
 				9F74B0CA1362230100A2DE47 /* UIKit.framework in Frameworks */,
@@ -193,10 +196,10 @@
 			children = (
 				9F0332D3136A6F3C0094D9BF /* Calendar.h */,
 				9F0332D4136A6F3C0094D9BF /* Calendar.m */,
-				9F0332CF136A6EEF0094D9BF /* Month.h */,
-				9F0332D0136A6EEF0094D9BF /* Month.m */,
 				9F0332D6136A6F660094D9BF /* CalendarAccount.h */,
 				9F0332D7136A6F660094D9BF /* CalendarAccount.m */,
+				9F0332CF136A6EEF0094D9BF /* Month.h */,
+				9F0332D0136A6EEF0094D9BF /* Month.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,7 +288,6 @@
 		9F74B0BA1362230100A2DE47 = {
 			isa = PBXGroup;
 			children = (
-				9F0332D9136A72E90094D9BF /* libLabelTop_ios.a */,
 				9F0332D2136A6F000094D9BF /* Storage */,
 				9F0332CE136A6EEF0094D9BF /* Model */,
 				9F1CFA5F1367655100337D1F /* Images */,
@@ -312,6 +314,8 @@
 		9F74B0C81362230100A2DE47 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F0332D9136A72E90094D9BF /* libLabelTop_ios.a */,
+				9F35B205136A85F6002CD4AA /* CoreData.framework */,
 				9F57DD5A1364DE6C00028317 /* QuartzCore.framework */,
 				9FAF7F961367731A00BC6409 /* libGDataTouchStaticLib.a */,
 				9F74B0C91362230100A2DE47 /* UIKit.framework */,
