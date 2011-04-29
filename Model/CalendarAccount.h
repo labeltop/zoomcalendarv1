@@ -15,10 +15,13 @@
 	NSString* pass;
 	//the tpe of account - google, ical, exchange
 	NSString* type;
+    
+    NSMutableArray* calendars;
 }
 
 @property (nonatomic, assign) NSString* user;
 @property (nonatomic, assign) NSString* pass;
 @property (nonatomic, assign) NSString* type;
+@property (nonatomic, assign) NSMutableArray* calendars;
 
 @end

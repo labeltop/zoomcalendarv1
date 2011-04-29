@@ -8,15 +8,23 @@
 
 #import "CalendarAccount.h"
 
-
 @implementation CalendarAccount
 
 @synthesize user;
 @synthesize pass;
 @synthesize type;
+@synthesize calendars;
+
+-(id) init {
+    self = [super init];
+    if (self) {
+        [self setCalendars:[[NSMutableArray alloc] init]];
+    }
+    return self;
+}
 
 -(NSString*) description {
-	return [NSString stringWithFormat:@"user:%@ pass:%@ type:%@", user, pass, type];
+	return [NSString stringWithFormat:@"user:%@ pass:%@ type:%@ cals:%@", user, pass, type, calendars];
 }
 
 @end

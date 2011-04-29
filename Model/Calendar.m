@@ -8,14 +8,20 @@
 
 #import "Calendar.h"
 
-
 @implementation Calendar
 
-@synthesize account;
 @synthesize name;
 
+-(id) initWithName:(NSString*)n {
+    self = [super init];
+    if (self) {
+        [self setName:n];
+    }
+    return self;
+}
+
 -(NSString*) description {
-	return [NSString stringWithFormat:@"%@ name:%@", account, name];
+	return [NSString stringWithFormat:@"name:%@", [self name]];
 }
 
 @end

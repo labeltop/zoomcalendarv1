@@ -13,6 +13,7 @@
 		9F0332D8136A6F660094D9BF /* CalendarAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0332D7136A6F660094D9BF /* CalendarAccount.m */; };
 		9F0332DA136A72EA0094D9BF /* libLabelTop_ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0332D9136A72E90094D9BF /* libLabelTop_ios.a */; };
 		9F05425113673E78008F7DA4 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F05424F13673E78008F7DA4 /* SettingsViewController.xib */; };
+		9F129F2C136B29B50095EC3B /* Trash_64x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F129F2B136B29B50095EC3B /* Trash_64x64.png */; };
 		9F1CFA6C136769EA00337D1F /* arrow-left.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1CFA6A136769EA00337D1F /* arrow-left.png */; };
 		9F1CFA6D136769EA00337D1F /* arrow-right.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1CFA6B136769EA00337D1F /* arrow-right.png */; };
 		9F1CFA6F13676CD300337D1F /* buttonToday.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F1CFA6E13676CD300337D1F /* buttonToday.png */; };
@@ -110,6 +111,8 @@
 		9F0332D7136A6F660094D9BF /* CalendarAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarAccount.m; sourceTree = "<group>"; };
 		9F0332D9136A72E90094D9BF /* libLabelTop_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libLabelTop_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F05424F13673E78008F7DA4 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = ZoomCalendar/SettingsViewController.xib; sourceTree = "<group>"; };
+		9F0ADF8C136B129D0022EBA5 /* CalendarHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarHolder.h; sourceTree = "<group>"; };
+		9F129F2B136B29B50095EC3B /* Trash_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trash_64x64.png; path = Images/Trash_64x64.png; sourceTree = "<group>"; };
 		9F1CFA6A136769EA00337D1F /* arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-left.png"; path = "Images/arrow-left.png"; sourceTree = "<group>"; };
 		9F1CFA6B136769EA00337D1F /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-right.png"; path = "Images/arrow-right.png"; sourceTree = "<group>"; };
 		9F1CFA6E13676CD300337D1F /* buttonToday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = buttonToday.png; path = Images/buttonToday.png; sourceTree = "<group>"; };
@@ -210,9 +213,18 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		9F0ADF8B136B12860022EBA5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9F0ADF8C136B129D0022EBA5 /* CalendarHolder.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9F1CFA5F1367655100337D1F /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9F129F2B136B29B50095EC3B /* Trash_64x64.png */,
 				9F0332C8136A6D890094D9BF /* Trash_128x128.png */,
 				9F6D86CF13677FC700E79E0D /* logo-48.png */,
 				9F1CFA6E13676CD300337D1F /* buttonToday.png */,
@@ -289,6 +301,7 @@
 		9F74B0BA1362230100A2DE47 = {
 			isa = PBXGroup;
 			children = (
+				9F0ADF8B136B12860022EBA5 /* Protocols */,
 				9F3B8192136AFBDA004CC0D0 /* Views */,
 				9F0332D2136A6F000094D9BF /* Storage */,
 				9F0332CE136A6EEF0094D9BF /* Model */,
@@ -512,6 +525,7 @@
 				9F6D86D013677FC700E79E0D /* logo-48.png in Resources */,
 				9F49FCDB1367ABCA00AC274E /* AccountEditViewController.xib in Resources */,
 				9F0332C9136A6D890094D9BF /* Trash_128x128.png in Resources */,
+				9F129F2C136B29B50095EC3B /* Trash_64x64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

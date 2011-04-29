@@ -11,11 +11,9 @@
 #import "CalendarAccount.h"
 
 @interface Calendar : NSManagedObject {
-    CalendarAccount* account;
 	NSString* name;
 }
 
-@property (nonatomic, assign) CalendarAccount* account;
 @property (nonatomic, assign) NSString* name;
 
 @end
