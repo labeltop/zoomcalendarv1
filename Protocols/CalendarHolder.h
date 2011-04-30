@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+
 @protocol CalendarHolder <NSObject>
+
+-(void) setCalendars:(NSArray*)calendars;
 
 @end
