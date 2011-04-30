@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F0332C9136A6D890094D9BF /* Trash_128x128.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F0332C8136A6D890094D9BF /* Trash_128x128.png */; };
 		9F0332D1136A6EEF0094D9BF /* Month.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0332D0136A6EEF0094D9BF /* Month.m */; };
 		9F0332D5136A6F3C0094D9BF /* Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0332D4136A6F3C0094D9BF /* Calendar.m */; };
 		9F0332D8136A6F660094D9BF /* CalendarAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F0332D7136A6F660094D9BF /* CalendarAccount.m */; };
@@ -30,6 +29,7 @@
 		9F3B81B5136AFBDA004CC0D0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B81A9136AFBDA004CC0D0 /* SettingsViewController.m */; };
 		9F3B81B6136AFBDA004CC0D0 /* ViewConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3B81AB136AFBDA004CC0D0 /* ViewConstants.m */; };
 		9F49FCDB1367ABCA00AC274E /* AccountEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F49FCD91367ABCA00AC274E /* AccountEditViewController.xib */; };
+		9F4D04BB136BA0CD004248BE /* DBStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F4D04BA136BA0CD004248BE /* DBStorage.m */; };
 		9F57DD5B1364DE6C00028317 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F57DD5A1364DE6C00028317 /* QuartzCore.framework */; };
 		9F6D86D013677FC700E79E0D /* logo-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F6D86CF13677FC700E79E0D /* logo-48.png */; };
 		9F74B0CA1362230100A2DE47 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F74B0C91362230100A2DE47 /* UIKit.framework */; };
@@ -102,7 +102,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9F0332C8136A6D890094D9BF /* Trash_128x128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trash_128x128.png; path = Images/Trash_128x128.png; sourceTree = "<group>"; };
 		9F0332CF136A6EEF0094D9BF /* Month.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Month.h; sourceTree = "<group>"; };
 		9F0332D0136A6EEF0094D9BF /* Month.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Month.m; sourceTree = "<group>"; };
 		9F0332D3136A6F3C0094D9BF /* Calendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calendar.h; sourceTree = "<group>"; };
@@ -111,7 +110,6 @@
 		9F0332D7136A6F660094D9BF /* CalendarAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarAccount.m; sourceTree = "<group>"; };
 		9F0332D9136A72E90094D9BF /* libLabelTop_ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libLabelTop_ios.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F05424F13673E78008F7DA4 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SettingsViewController.xib; path = ZoomCalendar/SettingsViewController.xib; sourceTree = "<group>"; };
-		9F0ADF8C136B129D0022EBA5 /* CalendarHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarHolder.h; sourceTree = "<group>"; };
 		9F129F2B136B29B50095EC3B /* Trash_64x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trash_64x64.png; path = Images/Trash_64x64.png; sourceTree = "<group>"; };
 		9F1CFA6A136769EA00337D1F /* arrow-left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-left.png"; path = "Images/arrow-left.png"; sourceTree = "<group>"; };
 		9F1CFA6B136769EA00337D1F /* arrow-right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "arrow-right.png"; path = "Images/arrow-right.png"; sourceTree = "<group>"; };
@@ -140,6 +138,8 @@
 		9F3B81AA136AFBDA004CC0D0 /* ViewConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewConstants.h; sourceTree = "<group>"; };
 		9F3B81AB136AFBDA004CC0D0 /* ViewConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewConstants.m; sourceTree = "<group>"; };
 		9F49FCD91367ABCA00AC274E /* AccountEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccountEditViewController.xib; sourceTree = "<group>"; };
+		9F4D04B9136BA0CD004248BE /* DBStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBStorage.h; sourceTree = "<group>"; };
+		9F4D04BA136BA0CD004248BE /* DBStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBStorage.m; sourceTree = "<group>"; };
 		9F57DD5A1364DE6C00028317 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9F6D86CF13677FC700E79E0D /* logo-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-48.png"; path = "Images/logo-48.png"; sourceTree = "<group>"; };
 		9F74B0C51362230100A2DE47 /* ZoomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +160,7 @@
 		9F74B0F51362230100A2DE47 /* ZoomCalendarTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZoomCalendarTests-Prefix.pch"; sourceTree = "<group>"; };
 		9F74B0F61362230100A2DE47 /* ZoomCalendarTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZoomCalendarTests.h; sourceTree = "<group>"; };
 		9F74B0F81362230100A2DE47 /* ZoomCalendarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZoomCalendarTests.m; sourceTree = "<group>"; };
+		9F98D32D136B667E00458A90 /* CalendarAccountHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarAccountHolder.h; sourceTree = "<group>"; };
 		9FA7A66513669C82000815CB /* LabelTop_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LabelTop_ios.xcodeproj; path = ../../LabelTop/LabelTop_code/LabelTop_ios/LabelTop_ios.xcodeproj; sourceTree = "<group>"; };
 		9FAF7F81136772F000BC6409 /* GData.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GData.xcodeproj; path = "../../mobile/ios/gdata-objectivec-client-1/Source/GData.xcodeproj"; sourceTree = "<group>"; };
 		9FAF7F961367731A00BC6409 /* libGDataTouchStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libGDataTouchStaticLib.a; sourceTree = SOURCE_ROOT; };
@@ -209,23 +210,16 @@
 		9F0332D2136A6F000094D9BF /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				9F4D04B9136BA0CD004248BE /* DBStorage.h */,
+				9F4D04BA136BA0CD004248BE /* DBStorage.m */,
 			);
 			path = Storage;
-			sourceTree = "<group>";
-		};
-		9F0ADF8B136B12860022EBA5 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				9F0ADF8C136B129D0022EBA5 /* CalendarHolder.h */,
-			);
-			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9F1CFA5F1367655100337D1F /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				9F129F2B136B29B50095EC3B /* Trash_64x64.png */,
-				9F0332C8136A6D890094D9BF /* Trash_128x128.png */,
 				9F6D86CF13677FC700E79E0D /* logo-48.png */,
 				9F1CFA6E13676CD300337D1F /* buttonToday.png */,
 				9F1CFA6A136769EA00337D1F /* arrow-left.png */,
@@ -248,11 +242,11 @@
 		9F3B8192136AFBDA004CC0D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9F3B81A5136AFBDA004CC0D0 /* Settings */,
 				9F3B8193136AFBDA004CC0D0 /* App */,
 				9F3B8196136AFBDA004CC0D0 /* Calendar */,
 				9F3B81A3136AFBDA004CC0D0 /* EventBus.h */,
 				9F3B81A4136AFBDA004CC0D0 /* EventBus.m */,
-				9F3B81A5136AFBDA004CC0D0 /* Settings */,
 				9F3B81AA136AFBDA004CC0D0 /* ViewConstants.h */,
 				9F3B81AB136AFBDA004CC0D0 /* ViewConstants.m */,
 			);
@@ -301,7 +295,7 @@
 		9F74B0BA1362230100A2DE47 = {
 			isa = PBXGroup;
 			children = (
-				9F0ADF8B136B12860022EBA5 /* Protocols */,
+				9F98D32C136B667E00458A90 /* Protocols */,
 				9F3B8192136AFBDA004CC0D0 /* Views */,
 				9F0332D2136A6F000094D9BF /* Storage */,
 				9F0332CE136A6EEF0094D9BF /* Model */,
@@ -371,6 +365,14 @@
 				9F74B0F51362230100A2DE47 /* ZoomCalendarTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F98D32C136B667E00458A90 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9F98D32D136B667E00458A90 /* CalendarAccountHolder.h */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9FA7A66613669C82000815CB /* Products */ = {
@@ -524,7 +526,6 @@
 				9F1CFA6F13676CD300337D1F /* buttonToday.png in Resources */,
 				9F6D86D013677FC700E79E0D /* logo-48.png in Resources */,
 				9F49FCDB1367ABCA00AC274E /* AccountEditViewController.xib in Resources */,
-				9F0332C9136A6D890094D9BF /* Trash_128x128.png in Resources */,
 				9F129F2C136B29B50095EC3B /* Trash_64x64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +578,7 @@
 				9F3B81B4136AFBDA004CC0D0 /* AccountEditViewController.m in Sources */,
 				9F3B81B5136AFBDA004CC0D0 /* SettingsViewController.m in Sources */,
 				9F3B81B6136AFBDA004CC0D0 /* ViewConstants.m in Sources */,
+				9F4D04BB136BA0CD004248BE /* DBStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,6 +693,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "E6EA724D-5D6C-4E11-9E2A-EAE4A743F070";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E6EA724D-5D6C-4E11-9E2A-EAE4A743F070";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "/Users/hasan/mobile/ios/gdata-objectivec-client-1/Source/** /Users/hasan/LabelTop/LabelTop_code/LabelTop_ios/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -712,6 +715,7 @@
 				);
 				OTHER_LDFLAGS = "-lxml2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "/Users/hasan/mobile/ios/gdata-objectivec-client-1/Source/** /Users/hasan/LabelTop/LabelTop_code/LabelTop_ios/**";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
