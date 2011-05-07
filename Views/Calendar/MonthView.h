@@ -35,6 +35,6 @@
 -(void) setMonth:(int)m inYear:(int)y;
 
 -(void) clear;
--(void) refresh;
+-(void) load;
 
 @end

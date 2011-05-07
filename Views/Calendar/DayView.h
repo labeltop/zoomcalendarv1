@@ -27,7 +27,9 @@
 
 -(void) setDate:(int)d inMonth:(int)m inYear:(int)y;
 -(void) setWeekLabel:(NSString*)str;
--(void) clear;
+
+-(void) clearDate;
+-(void) clearEvents;
 
 -(void)handleDoubleTap:(UITapGestureRecognizer *)sender;
 -(void)handleSingleTap:(UITapGestureRecognizer *)sender;

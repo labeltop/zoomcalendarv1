@@ -99,7 +99,7 @@
 }
 
 -(void) refresh {
-    [content refresh];
+    [content load];
 }
 
 @end

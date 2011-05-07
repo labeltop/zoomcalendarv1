@@ -95,11 +95,15 @@
     [self addSubview:labelDay];
 }
 
--(void) clear {
+-(void) clearDate {
     self.layer.borderColor = [UIColor clearColor].CGColor;
     for(UIView *subview in [self subviews]) {
         [subview removeFromSuperview];
     }
+}
+
+-(void) clearEvents {
+    
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {

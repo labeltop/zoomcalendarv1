@@ -131,6 +131,9 @@
         //go to next cell
         indexDayView++;
     }
+    
+    //load events
+    [self load];
 }
 
 - (void)dealloc
@@ -138,7 +141,14 @@
     [super dealloc];
 }
 
--(void) refresh {
+-(void) load {
+    
+    for (int i=0; i < [dayViews count]; i++) {
+        DayView* v = [dayViews objectAtIndex:i];
+        [v clearEvents];
+    }
+
+    
     //get db
     DBStorage* store = [DBStorage GetInstance];
     GoogleCalendar* gc = [GoogleCalendar GetInstance];
@@ -160,7 +170,8 @@
 -(void) clear {
     for (int i=0; i < [dayViews count]; i++) {
         DayView* v = [dayViews objectAtIndex:i];
-        [v clear];
+        [v clearDate];
+        [v clearEvents];
     }
 }
 
