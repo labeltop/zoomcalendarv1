@@ -72,7 +72,18 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
         if (calendarEventHolder != nil) {
             GDataLink *link = [cal alternateLink];
             if (link != nil) {
-                [service fetchFeedWithURL:[link URL]
+                
+                //create bounds
+                GDataDateTime* dttmStart = nil;
+                GDataDateTime* dttmEnd = nil;
+                
+                //create query
+                GDataQueryCalendar* query = [GDataQueryCalendar calendarQueryWithFeedURL:[link URL]];
+                [query setPublishedMinDateTime:dttmStart];
+                [query setPublishedMaxDateTime:dttmEnd];
+                
+                //get em
+                [service fetchFeedWithQuery:query
                                  delegate:self
                         didFinishSelector:@selector(ticket:finishedWithCalendarEvents:error:)];
             }
@@ -96,7 +107,7 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
     //NSMutableArray* calendarEvents = [[NSMutableArray alloc] init];
 	NSArray *entries = [feed entries];	
 	for(GDataEntryCalendar* calEvent in entries) {
-        NSLog(@"finishedWithCalendarEventsForAccount: %@", calEvent);        
+        NSLog(@"finishedWithCalendarEventsForAccount: %@", calEvent);
 	}
 }
 

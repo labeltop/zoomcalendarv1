@@ -15,6 +15,8 @@
 #import "GDataTextConstruct.h"
 #import "CalendarHolder.h"
 #import "CalendarEventHolder.h"
+#import "GDataQueryCalendar.h"
+#import "GDataDateTime.h"
 
 @interface GoogleCalendar : NSObject {
     
