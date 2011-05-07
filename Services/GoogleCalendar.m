@@ -14,6 +14,7 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
 
 -(void) getCalendarsForAccount:(CalendarAccount*)ca forHolder:(id<CalendarHolder>)h {
     calendarHolder = h;
+    calendarEventHolder = nil;
     
 	//get matching calendars
 	GDataServiceGoogleCalendar* service = [[GDataServiceGoogleCalendar alloc] init];
@@ -51,6 +52,9 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
 }
 
 -(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h {
+    calendarEventHolder = h;
+    calendarHolder = nil;
+    
     
 }
 
