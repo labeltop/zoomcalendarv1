@@ -165,7 +165,7 @@
         for(Calendar* c in calendars) {
             
             //get events
-            [gc getCalendarEventsForAccount:ca inCalendar:c forHolder:self];
+            [gc getCalendarEventsForAccount:ca inCalendar:c forHolder:self inMonth:month inYear:year];
         }
     }
     NSLog(@"MonthView: load: end");

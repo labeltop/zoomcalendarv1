@@ -17,6 +17,7 @@
 #import "CalendarEventHolder.h"
 #import "GDataQueryCalendar.h"
 #import "GDataDateTime.h"
+#import "DateUtils.h"
 
 @interface GoogleCalendar : NSObject {
     
@@ -24,12 +25,15 @@
     
     id<CalendarHolder> calendarHolder;
     id<CalendarEventHolder> calendarEventHolder;
+    
+    int currentMonth;
+    int currentYear;
 }
 
 -(id) init;
-
 -(void) getCalendarsForAccount:(CalendarAccount*)ca forHolder:(id<CalendarHolder>)h;
--(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h;
+-(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h inMonth:(int)month inYear:(int)yr;
 
 +(GoogleCalendar*) GetInstance;
+
 @end

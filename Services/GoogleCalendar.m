@@ -33,9 +33,12 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
 	[service fetchFeedWithURL:feedURL delegate:self didFinishSelector:@selector(ticket:finishedWithCalendars:error:)];
 }
 
--(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h {
+-(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h inMonth:(int)m inYear:(int)yr {
+    
     calendarEventHolder = h;
     calendarHolder = nil;
+    currentMonth = m;
+    currentYear = yr;
     
 	//auth
 	[service setUserCredentialsWithUsername:[ca user]
@@ -70,17 +73,26 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
         
         //get the events if somebody wants them
         if (calendarEventHolder != nil) {
+            
             GDataLink *link = [cal alternateLink];
             if (link != nil) {
                 
+                //get default timezone
+                NSTimeZone* tz = [NSTimeZone defaultTimeZone];
+                
+                //get dates
+                NSDate* dtStart = [DateUtils GetStartDateOfMonth:currentMonth inYear:currentYear];
+                NSDate* dtEnd =[DateUtils GetEndDateOfMonth:currentMonth inYear:currentYear];
+                NSLog(@"%@ to %@", dtStart, dtEnd);
+                
                 //create bounds
-                GDataDateTime* dttmStart = nil;
-                GDataDateTime* dttmEnd = nil;
+                GDataDateTime* dttmStart = [GDataDateTime dateTimeWithDate:dtStart timeZone:tz];
+                GDataDateTime* dttmEnd = [GDataDateTime dateTimeWithDate:dtEnd timeZone:tz];
                 
                 //create query
                 GDataQueryCalendar* query = [GDataQueryCalendar calendarQueryWithFeedURL:[link URL]];
-                [query setPublishedMinDateTime:dttmStart];
-                [query setPublishedMaxDateTime:dttmEnd];
+                [query setMinimumStartTime:dttmStart];
+                [query setMaximumStartTime:dttmEnd];
                 
                 //get em
                 [service fetchFeedWithQuery:query
