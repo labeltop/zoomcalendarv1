@@ -116,11 +116,16 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
 	}
     
     //loop em
-    //NSMutableArray* calendarEvents = [[NSMutableArray alloc] init];
+    NSMutableArray* calendarEvents = [[NSMutableArray alloc] init];
 	NSArray *entries = [feed entries];	
 	for(GDataEntryCalendar* calEvent in entries) {
         NSLog(@"finishedWithCalendarEventsForAccount: %@", calEvent);
+        
+        
 	}
+    
+    //pass it on
+    [calendarEventHolder setCalendarEvents:calendarEvents];
 }
 
 +(GoogleCalendar*) GetInstance {
