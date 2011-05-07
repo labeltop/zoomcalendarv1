@@ -10,6 +10,7 @@
 
 @implementation Calendar
 
+@synthesize idCalendarAccount;
 @synthesize name;
 
 -(id) initWithName:(NSString*)n {

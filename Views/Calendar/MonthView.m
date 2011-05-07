@@ -142,6 +142,7 @@
 }
 
 -(void) load {
+    NSLog(@"MonthView: load: start");
     
     for (int i=0; i < [dayViews count]; i++) {
         DayView* v = [dayViews objectAtIndex:i];
@@ -155,24 +156,29 @@
     
     //get calendar accounts
     NSArray* calendarAccounts = [store getCalendarAccounts];
+    NSLog(@"MonthView: load: calendarAccounts: %@", calendarAccounts);
     for (CalendarAccount* ca in calendarAccounts) {
         
         //get calendars for this account
         NSArray* calendars = [store getCalendarsForAccount:ca];
+        NSLog(@"MonthView: load: calendars: %@", calendars);
         for(Calendar* c in calendars) {
             
             //get events
             [gc getCalendarEventsForAccount:ca inCalendar:c forHolder:self];
         }
     }
+    NSLog(@"MonthView: load: end");
 }
 
 -(void) clear {
+    NSLog(@"MonthView: clear: start");
     for (int i=0; i < [dayViews count]; i++) {
         DayView* v = [dayViews objectAtIndex:i];
         [v clearDate];
         [v clearEvents];
     }
+    NSLog(@"MonthView: clear: end");
 }
 
 -(void) setCalendarEvents:(NSMutableArray*) events {

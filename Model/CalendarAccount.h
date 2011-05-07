@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@interface CalendarAccount : NSManagedObject {
+@interface CalendarAccount : NSObject {
+    int idCalendarAccount;
+    
     //credentials
 	NSString* user;
 	NSString* pass;
@@ -19,6 +21,7 @@
     NSMutableArray* calendars;
 }
 
+@property (nonatomic, assign) int idCalendarAccount;
 @property (nonatomic, assign) NSString* user;
 @property (nonatomic, assign) NSString* pass;
 @property (nonatomic, assign) NSString* type;

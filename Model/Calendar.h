@@ -10,10 +10,12 @@
 #import <CoreData/CoreData.h>
 #import "CalendarAccount.h"
 
-@interface Calendar : NSManagedObject {
+@interface Calendar : NSObject {
+    int idCalendarAccount;
 	NSString* name;
 }
 
+@property (nonatomic, assign) int idCalendarAccount;
 @property (nonatomic, assign) NSString* name;
 
 @end

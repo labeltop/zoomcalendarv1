@@ -18,9 +18,13 @@
 
 @interface GoogleCalendar : NSObject {
     
+    GDataServiceGoogleCalendar* service;
+    
     id<CalendarHolder> calendarHolder;
     id<CalendarEventHolder> calendarEventHolder;
 }
+
+-(id) init;
 
 -(void) getCalendarsForAccount:(CalendarAccount*)ca forHolder:(id<CalendarHolder>)h;
 -(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h;
