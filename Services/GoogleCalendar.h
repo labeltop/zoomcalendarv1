@@ -14,14 +14,16 @@
 #import "GDataEntryCalendar.h"
 #import "GDataTextConstruct.h"
 #import "CalendarHolder.h"
+#import "CalendarEventHolder.h"
 
 @interface GoogleCalendar : NSObject {
     
     id<CalendarHolder> calendarHolder;
-    
+    id<CalendarEventHolder> calendarEventHolder;
 }
 
 -(void) getCalendarsForAccount:(CalendarAccount*)ca forHolder:(id<CalendarHolder>)h;
+-(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h;
 
 +(GoogleCalendar*) GetInstance;
 @end

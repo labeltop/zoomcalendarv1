@@ -98,4 +98,8 @@
     return mth;    
 }
 
+-(void) refresh {
+    [content refresh];
+}
+
 @end

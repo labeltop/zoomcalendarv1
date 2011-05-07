@@ -60,7 +60,7 @@
         
         //we will save them for later use
         int maxVisibleDayViews = 42; //6 weeks
-        arrayDayViews = [[NSMutableArray alloc] initWithCapacity:maxVisibleDayViews];
+        dayViews = [[NSMutableArray alloc] initWithCapacity:maxVisibleDayViews];
         
         //create max number of day labels   
         int weekOfMonth = 0;
@@ -95,7 +95,7 @@
                 dayOfWeek++;
             
             //save a ref to this 
-            [arrayDayViews addObject:dv];
+            [dayViews addObject:dv];
             
         } while (day <= maxVisibleDayViews);    
         
@@ -111,10 +111,7 @@
     [labelTitle setText:[NSString stringWithFormat:@"%@, %d", [DateUtils GetMonthTitle:[self month]], [self year]]];
         
     //loop and clean all
-    for (int i=0; i < [arrayDayViews count]; i++) {
-        DayView* v = [arrayDayViews objectAtIndex:i];
-        [v clear];
-    }
+    [self clear];
     
     //figure out whats day of week for 1st of month, this will be first dayview to use from array
     int indexDayView = [DateUtils GetDayfWeek:1 inMonth:[self month] inYear:[self year]];
@@ -128,7 +125,7 @@
     for(int dayOfMonth = 1; dayOfMonth <= maxDaysInMonth; dayOfMonth++) {
         
         //show it
-        DayView* v = [arrayDayViews objectAtIndex:indexDayView];
+        DayView* v = [dayViews objectAtIndex:indexDayView];
         [v setDate:dayOfMonth inMonth:[self month] inYear:[self year]];
         
         //go to next cell
@@ -139,6 +136,36 @@
 - (void)dealloc
 {
     [super dealloc];
+}
+
+-(void) refresh {
+    //get db
+    DBStorage* store = [DBStorage GetInstance];
+    GoogleCalendar* gc = [GoogleCalendar GetInstance];
+    
+    //get calendar accounts
+    NSArray* calendarAccounts = [store getCalendarAccounts];
+    for (CalendarAccount* ca in calendarAccounts) {
+        
+        //get calendars for this account
+        NSArray* calendars = [store getCalendarsForAccount:ca];
+        for(Calendar* c in calendars) {
+            
+            //get events
+            [gc getCalendarEventsForAccount:ca inCalendar:c forHolder:self];
+        }
+    }
+}
+
+-(void) clear {
+    for (int i=0; i < [dayViews count]; i++) {
+        DayView* v = [dayViews objectAtIndex:i];
+        [v clear];
+    }
+}
+
+-(void) setCalendarEvents:(NSMutableArray*) events {
+    NSLog(@"%@", events);
 }
 
 @end

@@ -41,17 +41,17 @@ static GoogleCalendar* sharedGoogleCalendar = nil;
 		//get its name
 		GDataTextConstruct* name = [cal title];
         NSString* nameStr = [name stringValue];
-        NSLog(@"finishedWithFeed: nameStr %@", nameStr);
-        
-		//create calendar
         Calendar* c = [[Calendar alloc] initWithName: [nameStr copyWithZone:nil]];
-        NSLog(@"finishedWithFeed: Calendar %@", c);
-        
+        NSLog(@"finishedWithFeed: Calendar %@", c);        
         //save it
         [calendars addObject:c];
 	}
     
     [calendarHolder setCalendars:calendars];
+}
+
+-(void) getCalendarEventsForAccount:(CalendarAccount*)ca inCalendar:(Calendar*)c forHolder:(id<CalendarEventHolder>)h {
+    
 }
 
 +(GoogleCalendar*) GetInstance {

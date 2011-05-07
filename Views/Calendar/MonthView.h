@@ -10,8 +10,13 @@
 #import "DayView.h"
 #import "DateUtils.h"
 #import "ViewConstants.h"
+#import "CalendarAccountHolder.h"
+#import "DBStorage.h"
+#import "CalendarAccount.h"
+#import "Calendar.h"
+#import "GoogleCalendar.h"
 
-@interface MonthView : UIView {
+@interface MonthView : UIView <CalendarEventHolder> {
     
     //get a specific date
     int month;
@@ -19,7 +24,7 @@
     
     //ui
     UILabel* labelTitle;
-    NSMutableArray* arrayDayViews;
+    NSMutableArray* dayViews;
         
 }
 
@@ -28,5 +33,8 @@
 
 -(id) initAtX:(int)x atY:(int)y;
 -(void) setMonth:(int)m inYear:(int)y;
+
+-(void) clear;
+-(void) refresh;
 
 @end

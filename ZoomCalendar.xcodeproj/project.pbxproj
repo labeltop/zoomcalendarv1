@@ -144,6 +144,8 @@
 		9F548C35136BD66E00C75E7D /* GoogleCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleCalendar.h; sourceTree = "<group>"; };
 		9F548C36136BD66E00C75E7D /* GoogleCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleCalendar.m; sourceTree = "<group>"; };
 		9F548C38136BDAAD00C75E7D /* CalendarHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarHolder.h; sourceTree = "<group>"; };
+		9F548C39136BDF3A00C75E7D /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
+		9F548C3A136BDF4200C75E7D /* CalendarEventHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarEventHolder.h; sourceTree = "<group>"; };
 		9F57DD5A1364DE6C00028317 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9F6D86CF13677FC700E79E0D /* logo-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-48.png"; path = "Images/logo-48.png"; sourceTree = "<group>"; };
 		9F74B0C51362230100A2DE47 /* ZoomCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZoomCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,6 +388,8 @@
 			children = (
 				9F98D32D136B667E00458A90 /* CalendarAccountHolder.h */,
 				9F548C38136BDAAD00C75E7D /* CalendarHolder.h */,
+				9F548C39136BDF3A00C75E7D /* Protocol.h */,
+				9F548C3A136BDF4200C75E7D /* CalendarEventHolder.h */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";

@@ -121,6 +121,11 @@
 - (void)settingsViewControllerDidFinish:(SettingsViewController*)controller
 {
     [self dismissModalViewControllerAnimated:YES];
+    [self refresh];
+}
+
+-(void) refresh {
+    [scrollView refresh];
 }
 
 @end

@@ -25,6 +25,8 @@
 -(IBAction) buttonForward_click;
 -(IBAction) buttonBack_click;
 
+-(void) refresh;
+
 -(void) changeTheViewToPortrait:(BOOL)portrait andDuration:(NSTimeInterval)duration;
 
 @end

@@ -23,4 +23,6 @@
 -(Month*) nextMonth;
 -(Month*) prevMonth;
 
+-(void) refresh;
+
 @end
